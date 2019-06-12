@@ -3,7 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	     xmlns:prism="http://prismlibrary.com/"
              xmlns:local="clr-namespace:TorrentMigrate.App">
-    <Application.Resources>
-         
-    </Application.Resources>
+    <prism:PrismApplication.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DefaultDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </prism:PrismApplication.Resources>
 </prism:PrismApplication>

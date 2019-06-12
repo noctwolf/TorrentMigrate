@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using Prism.Regions;
 
 namespace TorrentMigrate.App.Views
 {
@@ -10,6 +11,11 @@ namespace TorrentMigrate.App.Views
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            RegionManager.GetRegionManager(this).RequestNavigate("ContentRegion", nameof(UTorrentView));
         }
     }
 }

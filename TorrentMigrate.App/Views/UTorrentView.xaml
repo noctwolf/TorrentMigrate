@@ -1,0 +1,24 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:vm="clr-namespace:TorrentMigrate.App.ViewModels" 
+             mc:Ignorable="d" x:Class="TorrentMigrate.App.Views.UTorrentView"             
+             d:DesignWidth="644" d:DesignHeight="300">
+    <UserControl.DataContext>
+        <vm:UTorrentViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <Button Content="开始" Command="{Binding StartAsyncCommand, Mode=OneWay}"/>
+            <Button Content="停止" Command="{Binding StartAsyncCommand.CancelCommand, Mode=OneWay}"/>
+            <Button Content="选择" DockPanel.Dock="Right" Click="Button_Click"/>
+            <TextBox x:Name="textBoxTorrentRoot" TextWrapping="Wrap" VerticalContentAlignment="Center" Text="{Binding TorrentRoot, UpdateSourceTrigger=PropertyChanged}"/>
+        </DockPanel>
+    </Grid>
+</UserControl>

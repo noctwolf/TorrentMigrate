@@ -17,7 +17,7 @@ namespace TorrentMigrate.App
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            containerRegistry.RegisterForNavigation<UTorrentView>();
         }
     }
 }
