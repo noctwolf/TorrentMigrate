@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorrentMigrate.App", "TorrentMigrate.App\TorrentMigrate.App.csproj", "{F7BBA799-13E0-46EB-B13B-39A39306C33F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Torrent.Client", "Torrent.Client\Torrent.Client.csproj", "{BC96AA90-6DEB-4DF5-BBA8-A58C5416A7A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorrentClient", "TorrentClient\TorrentClient.csproj", "{0DBB7CE3-5B96-4495-9E48-3D82B5C0FA36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{F7BBA799-13E0-46EB-B13B-39A39306C33F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7BBA799-13E0-46EB-B13B-39A39306C33F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7BBA799-13E0-46EB-B13B-39A39306C33F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC96AA90-6DEB-4DF5-BBA8-A58C5416A7A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC96AA90-6DEB-4DF5-BBA8-A58C5416A7A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC96AA90-6DEB-4DF5-BBA8-A58C5416A7A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC96AA90-6DEB-4DF5-BBA8-A58C5416A7A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DBB7CE3-5B96-4495-9E48-3D82B5C0FA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DBB7CE3-5B96-4495-9E48-3D82B5C0FA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DBB7CE3-5B96-4495-9E48-3D82B5C0FA36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DBB7CE3-5B96-4495-9E48-3D82B5C0FA36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

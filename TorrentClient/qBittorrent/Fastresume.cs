@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Torrent.Client.qBittorrent
+namespace TorrentClient.qBittorrent
 {
     public class Fastresume
     {
