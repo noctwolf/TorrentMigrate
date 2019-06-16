@@ -5,11 +5,18 @@ using BencodeNET.Objects;
 
 namespace TorrentClient.uTorrent
 {
-    public class ResumeInfo
+    public class ResumeInfo : BDictionaryBase
     {
-        public static explicit operator ResumeInfo(BDictionary bDictionary)
+        public ResumeInfo(ResumeDat resumeDat, string fileName, BDictionary bDictionary) : base(bDictionary)
         {
-            return new ResumeInfo();
+            ResumeDat = resumeDat;
+            FileName = fileName;
         }
+
+        public ResumeDat ResumeDat { get; }
+
+        public string FileName { get; }
+
+        public string Caption => Get();
     }
 }

@@ -7,20 +7,21 @@ using BencodeNET.Objects;
 
 namespace TorrentClient.uTorrent
 {
-    public class ResumeDat
+    public class ResumeDat : BDictionaryBase
     {
-        public string Fileguard { get; set; }
-
-        public IDictionary<string, ResumeInfo> Resumes { get; set; }
-
-        public static explicit operator ResumeDat(BDictionary bDictionary)
+        public ResumeDat(string filePath, BDictionary bDictionary) : base(bDictionary)
         {
-            return new ResumeDat()
-            {
-                Fileguard = bDictionary[".fileguard"].ToString(),
-                Resumes = bDictionary.Where(f => f.Value is BDictionary)
-                    .ToDictionary(f => f.Key.ToString(), f => (ResumeInfo)(f.Value as BDictionary))
-            };
+            FilePath = filePath;
+            Fileguard = bDictionary[".fileguard"].ToString();
+            Resumes = bDictionary.Where(f => f.Value is BDictionary)
+                .ToDictionary(f => f.Key.ToString(),
+                    f => new ResumeInfo(this, f.Key.ToString(), f.Value as BDictionary));
         }
+
+        string FilePath { get; }
+
+        public string Fileguard { get; }
+
+        public IDictionary<string, ResumeInfo> Resumes { get; }
     }
 }

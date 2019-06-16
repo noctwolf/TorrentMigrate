@@ -19,8 +19,8 @@ namespace TorrentMigrate.App.ViewModels
 
         private void Start()
         {
-            var parser = new BencodeParser(); // Default encoding is Encoding.UT8F, but you can specify another if you need to
-            var resumeDat = (ResumeDat)parser.Parse<BDictionary>(TorrentRoot);
+            var parser = new BencodeParser();
+            var resumeDat = new ResumeDat(TorrentRoot, parser.Parse<BDictionary>(TorrentRoot));
             for (var i = 0; i < 100; i++)
             {
                 if (startAsyncCommand.IsCancellationRequested) break;
